@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+
+
+    <script>
+        // replace elements in the function 
+        function hackerSpeak(str) {
+            for (var i = 0; i < str.length; i++) {
+                if (str[i] = "a") { str[i].replace("a", 4) }
+                else if (str[i] = "e") { str[i].replace("e", 3) }
+                else if (str[i] = "i") { str[i].replace("i", 1) }
+                else if (str[i] = "o") { str[i].replace("o", 0) }
+                else if (str[i] = "s") { str[i].replace("s", 5) }
+                else { }
+
+            }
+            return str
+            document.getElementById("demo").innerHTML = str("a,e,i,o,s")
+        }
+
+
+        var x = 9
+        var y = 8
+        total = x + y
+        document.getElementById("demo1").innerHTML = x * y
+
+        const p = [2, 4, 6, 1, 9];
+        p.push(7)
+        document.getElementById("demo2").innerHTML = p.push(7)
+        document.getElementById("demo3").innerHTML = p
+        function arr(a, b) {
+            return a / b
+        }
+        document.getElementById("demo4").innerHTML = arr(81, 9)
+
+        const r = [1, 2, 3, 4, 3, 2, 4, 5]
+        let text = " "
+        for (let i = 0; i < r.length; i++)
+            text += r[i]
+
+        document.getElementById("demo5").innerHTML = text
+        document.getElementById("demo6").innerHTML = r.sort()
+        document.getElementById("demo7").innerHTML = r.splice(5)
+
+
+        let numbers = [3, 5, 8, 9, 2];
+        function multiplyByTwo(number) {
+            return number / 2;
+        }
+
+        let multipliedNumbers = numbers.map(multiplyByTwo);
+
+        console.log(multipliedNumbers);
+        document.getElementById("demo8").innerHTML = multipliedNumbers
+
+
+        // write function find all multiple of the arry
+        let g = [33, 5, 8, 9, 4];
+        function name(number) {
+            return number * 5
+        }
+        let h = g.map(name)
+        console.log(h)
+        // sum of the array
+        const array = h
+        let sum = 0;
+
+        for (let i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        console.log(sum);
+        let s = sum;
+        let k = 10
+        result = sum / k
+        console.log(result)
+        // document.getElementById("demo9").innerHTML = h
+        // document.getElementById("demo10").innerHTML = sum
+        document.getElementById("demo11").innerHTML = result
+
+
+        // find the sum of the object (1st way)
+        let prices = {
+            "apple": 100,
+            "banana": 300,
+            "orange": 250
+        };
+
+        let answer = 0;
+        for (let price of Object.values(prices)) {
+            answer += price;
+        }
+        console.log(answer)
+        document.getElementById("demo12").innerHTML = answer
+
+        // 2nd way
+
+        function findSum(obj) {
+            let addition = 0;
+            for (property in obj) {
+                addition += obj[property];
+            }
+            return addition;
+        }
+
+        // 3rd way
+        var sample = { a: 1, b: 2, c: 3 };
+        let final = findSum(sample)
+        console.log(findSum(sample));
+        document.getElementById("demo13").innerHTML = final
+
+
+
+        // write function find the first unique number in array(1sr way)
+        function n() {
+            let arr = [1, 1, 24, 2, 2, 2, 3, 1];
+            let answer = 0
+            for (let i = 0; i < arr.length; i++) {
+                if (i === arr.indexOf(arr[i]) && i === arr.lastIndexOf(arr[i])) {
+                    answer = arr[i];
+                    break;
+                } else {
+                    answer = "not founded.";
+                }
+            }
+            return answer;
+        }
+        console.log(n())
+        document.getElementById("demo14").innerHTML = n()
+
+        // 2nd way
+        const t = [1, 1, 4, 2, 2, 2, 3, 1];
+        let q = {};
+        t.map(a => q[a] = (q[a] || 0) + 1)
+        var res = t.find(a => q[a] === 1)
+        console.log(res)
+
+        // Write a function that finds the first unique number in a given sequence.
+        // The unique number is the number that occurs exactly once in array.
+        // [3,9, 19, 9, 34, 1, 3] -> 19
+        // [6, 2, 60, 49, 2, 4, 10, 3] = > 6
+        // [2, 2, 2] => Null
+        function exam(z) {
+            let unique = [];
+            for (let i = 0; i < z.length; i++) {
+                if (!unique[z[i]]) unique[z[i]] = 1;
+                else unique[z[i]]++;
+            }
+            for (let i = 0; i < z.length; i++) {
+                if (unique[z[i]] === 1) return z[i];
+            }
+            return null;
+        }
+        console.log(exam([3, 9, 19, 9, 34, 1, 3]))
+        console.log(exam([6, 2, 60, 49, 2, 4, 10, 3]))
+        console.log(exam([2, 100, 49, 2, 4, 20, 3]))
+        console.log(exam([2, 2, 2]))
+
+
+        document.getElementById("demo15").innerHTML = exam([3, 9, 19, 9, 34, 1, 3])
+
+        // find odds numbers
+
+        let arrow = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+        let odds = arrow.filter(function (j) { return j % 2 })
+
+        console.log(odds)
+
+        // function return even numbers in array
+        function getEvenNumbers() {
+            let arr = [4, 5, 7, 8, 14, 45, 76];
+
+            let the_evens = arr.filter(number => number % 2 == 0);
+            console.log('Even Numbers: ' + the_evens);
+        }
+        getEvenNumbers();
+
+        // comparing numbers
+        function compare(a, b) {
+            if (a > b) {
+                return -1;
+            } else if (a < b) {
+                return 1;
+            }
+            return 0;
+        }
+        console.log(compare(8, 9))
+
+        //  find the great number or maximum and min
+
+        let bu = [4, 13, 27, 0, -5];
+
+        let j = Math.max.apply(null, bu);
+        let e = Math.min.apply(null, bu);
+        console.log(j)
+        console.log(e)
+        // find all numbers in array less than 70
+
+        var numArray = new Array(1, 4, 66, 123, 240, 444, 555);
+        var o = 0;
+
+        while (numArray[o] < 100) {
+            console.log(numArray[o++]);
+        }
+        // sorting in order 1st
+        let to = [1, 4, 66, 123, 240, 444, 555, 20]
+        let v = to.sort(function (a, b) { return a - b })
+        console.log(v)
+        // 2nd way
+
+        function m(a, b) {
+            return b - a
+        }
+        let po = [1, 4, 66, 123, 240, 444, 555, 20]
+        console.log(po.sort(m))
+        m()
+
+        // 3rd way
+        var l = new Array(4, 66, 123, 240, 444, 555, 20)
+        z = l.sort(function (a, b) { return a - b })
+        console.log(z)
+
+        // .forEach | performs a function for each element in an array
+        let miles = [1, 3, 5, 10];
+        let moreMiles = [];
+        miles.forEach(element => moreMiles.push(element + 10))
+        console.log(moreMiles);
+
+
+        // .filter | creates a new array with the elements that pass the provided function
+        let names = ["Rebecca", "Chris", "Ben", "Rachel"];
+        names = names.filter(name => name[0] === "R")
+        console.log(names)  // names = ["Rebecca", "Rachel"];
+
+
+
+        let ages = [16, 21, 26, 14];
+        ages = ages.filter(age => age >= 21)
+        console.log(ages)  // ages = [21, 26];
+
+        //  .map | creates a new array with the result of executing the provided function to each element in the array
+        let population = [200, 600, 170, 100];
+        let doublePopulation = population.map(element => element * 2);
+        console.log(doublePopulation); // [400, 1200, 340, 200]
+
+
+        // .reduce | combines (or reduces) the array into one single value
+        let ticketPrices = [99.54, 56.43, 122.94];
+        let totalCostOfTickets = ticketPrices.reduce((total, amount) => total + amount)
+        console.log(totalCostOfTickets)
+        // totalCostOfTickets = 278.91
+
+
+
+        function multiplyAndSumArgs(multiplier, ...numbers) {
+            console.log(multiplier); // 2
+            console.log(numbers);    // [5, 6]
+            const sumArgs = numbers.reduce((sum, number) => sum + number);
+            return multiplier * sumArgs;
+        }
+        console.log(multiplyAndSumArgs(2, 5, 6)); // => 22
+
+
+        // get unique values from array  use spread operator ... 1st
+        const myArray = [1, 2, 3, 1, 5, 8, 1, 2, 9, 4];
+        const unique = [...new Set(myArray)]; // [1, 2, 3, 5, 8, 9, 4]
+        console.log(unique)
+
+        // 2nd grd unique value use spread operator ...
+        let all = ["1", "1", "2", "3", "3", "1"];
+        let uniques = all.filter((item, i, ar) => ar.indexOf(item) === i);
+        console.log(uniques);  // ["1", "2", "3"]
+
+        // unique 3rd way
+
+        const age = [26, 27, 26, 26, 28, 28, 29, 29, 30]
+        const results = Array.from(new Set(age));
+        console.log(results)    // [26, 27, 28, 29, 30]
+
+        // function return first unique number in array
+        const arre = [1, 1, 4, 2, 2, 2, 3, 1];
+        const result1 = arre.find((x) => arre.indexOf(x) === arre.lastIndexOf(x));
+        console.log(result1);   // 4
+
+        // Use regExp
+        let movieName = "'7',6,5,8,4,9,";
+        let noNumRegex = /\d/g; // Change this line
+        let resulte = movieName.match(noNumRegex);
+        console.log(resulte)
+
+
+        // calculate average in array 1st method
+        arry = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+        function calculateAverage(array) {
+            var total = 0;
+            var count = 0;
+
+            array.forEach(function (item) {
+                total += item;
+                count++;
+            });
+
+            return total / count;
+        }
+
+        console.log(calculateAverage(arry));      // 8
+
+        // 2nd method
+        let arr3 = [99, 45, 26, 7, 11, 122, 22]
+        let average = arr3.reduce((a, b) => a + b) / arr.length;
+        console.log(average)
+
+        // How to find square of number 1st method
+
+        function square(num) {
+            return num * num;
+        }
+        console.log(square(2)); // 4
+        console.log(square(5)); // 25
+        console.log(square(8)); // 64
+
+
+        // 2nd method
+        let num = Math.pow(6, 2);
+        console.log(num); // 16
+
+        // how to find square root 1st method
+        let root = Math.sqrt(9);
+        console.log(root); // 3
+
+
+        // 2nd method
+        let abana = [4, 16, 64]
+        let non = abana.map((z) => Math.sqrt(z)) //square roots 2,4,8
+        let gogo = abana.map((f) => f ** 2) // squares 16,25,4096
+        console.log(non)
+        console.log(gogo)
+
+        // use of prototypes
+
+        function Person(name, job, yearOfBirth) {
+            this.name = name;
+            this.job = job;
+            this.yearOfBirth = yearOfBirth;
+        }
+        // adding calculateAge() method to the Prototype property
+        Person.prototype.calculateAge = function () {
+            console.log('The current age is: ' + (2021 - this.yearOfBirth));
+        }
+        console.log(Person.prototype);
+
+        // creating Object Person1
+        let Person1 = new Person('Jenni', 'clerk', 1986);
+        console.log(Person1)
+        let Person2 = new Person('Madhu', 'Developer', 1993);
+        console.log(Person2)
+
+        Person1.calculateAge();
+        Person2.calculateAge();
+
+        // remove vowel in string
+
+        var strings = ["bongo drums", "guitar",
+            "flute", "double bass", "xylophone", "piano"
+        ];
+
+        strings = strings.map(string => string.replace(/[aeiou]/g, ''));
+
+        console.log(strings);
+
+        // Find the greatest common divisor of two positive numbers
+
+        var gcd = function (a, b) {
+            if (!b) {
+                return a;
+            }
+
+            return gcd(b, a % b);
+        };
+        console.log(gcd(18, 81));
+
+        // LCM(a, b) = a × b / GCF(a, b) and
+
+        // GCF(a, b) = a × b / LCM(a, b)
+
+
+        // Find LCM= product of a,b divid by the great number divid a,b or (a×b)/GCF(a,b)
+        let bobo = [36, 24]
+        let dodo = bobo.reduce((a, b) => a * b) / 12
+        console.log(dodo)
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
