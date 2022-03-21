@@ -25,10 +25,10 @@
     <p id="demo13"></p>
     <p id="demo14"></p>
     <p id="demo15"></p>
-
+    <p id="demo16"></p>
 
     <script>
-        // replace elements in the function 
+        // replace elements in the function 1st
         function hackerSpeak(str) {
             for (var i = 0; i < str.length; i++) {
                 if (str[i] = "a") { str[i].replace("a", 4) }
@@ -40,8 +40,17 @@
 
             }
             return str
-            document.getElementById("demo").innerHTML = str("a,e,i,o,s")
+            // document.getElementById("demo").innerHTML = str("a,e,i,o,s")
         }
+        // console.log(hackerSpeak(['a', 'e', 'i', 'o', 's']))
+        // 2nd
+        function z() {
+            return arr5.splice(0, 5, 4, 1, 2, 5, 8)
+        }
+        let arr5 = ['e', 'a', 'o', 'u', 's']
+        let ha = arr5.map(z)
+        console.log(arr5)
+
 
 
         var x = 9
@@ -183,13 +192,20 @@
 
         document.getElementById("demo15").innerHTML = exam([3, 9, 19, 9, 34, 1, 3])
 
-        // find odds numbers
+        // find odds numbers 1st
 
         let arrow = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
         let odds = arrow.filter(function (j) { return j % 2 })
 
         console.log(odds)
+
+        // 2nd
+        function zo(x) {
+            return x.filter((x) => x % 2).join(" ")
+        }
+        console.log(zo([2, 31, 4, 545, 21, 8]))
+        console.log(zo([2, 1, 4, 10, 21, 8]))
 
         // function return even numbers in array
         function getEvenNumbers() {
@@ -291,6 +307,14 @@
         const unique = [...new Set(myArray)]; // [1, 2, 3, 5, 8, 9, 4]
         console.log(unique)
 
+        // 4th
+        function bo(ha) {
+
+            return new Set(ha)
+        }
+
+        console.log(bo([6, 2, 60, 49, 2, 3, 4, 10, 3]))
+
         // 2nd grd unique value use spread operator ...
         let all = ["1", "1", "2", "3", "3", "1"];
         let uniques = all.filter((item, i, ar) => ar.indexOf(item) === i);
@@ -306,6 +330,20 @@
         const arre = [1, 1, 4, 2, 2, 2, 3, 1];
         const result1 = arre.find((x) => arre.indexOf(x) === arre.lastIndexOf(x));
         console.log(result1);   // 4
+
+        // find not unique number or diplicate number 1st
+        let se = [3, 4, 5, 4, 3, 67, 100]
+        let b = se.filter((f) => se.indexOf(f) !== se.lastIndexOf(f))
+
+        console.log(b);
+
+        // 2nd
+        function never(na) {
+            return na.filter((f) => na.indexOf(f) !== na.lastIndexOf(f))
+        }
+        console.log(never([8, 25, 8, 1, 4, 9]))   // 8
+
+
 
         // Use regExp
         let movieName = "'7',6,5,8,4,9,";
@@ -333,7 +371,7 @@
 
         // 2nd method
         let arr3 = [99, 45, 26, 7, 11, 122, 22]
-        let average = arr3.reduce((a, b) => a + b) / arr.length;
+        let average = arr3.reduce((a, b) => a + b) / arr3.length;
         console.log(average)
 
         // How to find square of number 1st method
@@ -384,7 +422,7 @@
         Person1.calculateAge();
         Person2.calculateAge();
 
-        // remove vowel in string
+        // remove vowel in array
 
         var strings = ["bongo drums", "guitar",
             "flute", "double bass", "xylophone", "piano"
@@ -393,6 +431,20 @@
         strings = strings.map(string => string.replace(/[aeiou]/g, ''));
 
         console.log(strings);
+
+
+        // remove vowel in string
+        function str(popy) {
+            return popy.replace(/[aeiou]/ig, '')
+        }
+        console.log(str('mama merezi'))
+
+        // count vowel in string
+        function getCount(str) {
+            return (str.match(/[aeiou]/ig) || []).length;
+        }
+        console.log(getCount('rertxcdza'));
+
 
         // Find the greatest common divisor of two positive numbers
 
@@ -416,14 +468,225 @@
         console.log(dodo)
 
 
+        // Print numbers from 1 to 10
+
+        for (var li = 1; li <= 5; li++) {
+            console.log(li);
+        }
+
+        // Print the odd numbers less than 12
+
+        for (var ki = 1; ki <= 12; ki += 2) {
+            console.log(ki);
+        }
+
+        // Print the multiplication table with 7
+
+        for (var i = 1; i <= 10; i++) {
+            var row = "7 * " + i + " = " + 7 * i;
+            console.log(row);
+        }
+
+        // Calculate the sum of numbers from 1 to 10
+        var summ = 0;
+
+        for (var i = 1; i <= 10; i++) {
+            summ += i;
+        }
+
+        console.log(summ);
+
+        //  calculate sum of odd numbers greater than 10 and less than 30  1st
+        var suma = 0;
+
+        for (var i = 11; i <= 30; i += 2) {
+            suma += i;
+        }
+
+        console.log(suma);
+        // even number between 10 and 20
+        for (var si = 10; si <= 20; si++) {
+
+            if (si % 2 == 0) {
+                console.log(si);
+            }
+        }
+
+        // put in upper case
+
+        function toUpper(string) {
+            return string.toUpperCase();
+        }
+
+        const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+        const upperCats = cats.map(toUpper);
+
+        console.log(upperCats);
+        // [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
+
+        // convert 1st letter in upper case
+
+        let element = ["alice", "bob", "charlie", "danielle"]
+        let capitalized = element.map((name) => name[0].toUpperCase() + name.slice(1))
+        console.log(capitalized)  // ["Alice", "Bob", "Charlie", "Danielle"]
+
+        // find words start with "L" 1st method
+        function lCat(cat) {
+            return cat.startsWith('L');
+        }
+
+        const cat = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+        const filtered = cat.filter(lCat);
+
+        console.log(filtered);// [ "Leopard", "Lion" ]
+
+        // 2nd method
+        const catts = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+        const filtereds = catts.filter((catt) => catt.endsWith('al'));
+        console.log(filtereds);// [ "Leopard", "Lion" ]
+        document.getElementById("demo16").innerHTML = filtereds
+
+        // 3rd
+        function ta(l) {
+            return l.filter((h) => h.startsWith("R")).join(" ")
+        }
+        console.log(ta(["Rebecca", "Chris", "Ben", "Rachel"])) // Rebecca Rachel
+        console.log(ta(["Rebecca", "Chris", "Ren", "Rachel"]))  // Rebecca Ren Rachel
+
+        // compare the length
+        function isLong(city) {
+            return city.length > 8;
+        }
+        const cities = ['London', 'Liverpool', 'Totnes', 'Edinburgh'];
+        const longer = cities.filter(isLong);
+        console.log(longer);  // [ "Liverpool", "Edinburgh" ]
+
+        // how to convert array to string
+
+        // 1st use  toString() method        always separate with comma
+        // 2nd use  join()method          you can chose what to separate with
+        // 4th  toLocalString() 
+
+        // how to convert string to array  we have 4 ways bellow
+
+        const string = 'hi there';
+
+        const usingSplit = string.split('');
+        const usingSpread = [...string];
+        const usingArrayFrom = Array.from(string);
+        const usingObjectAssign = Object.assign([], string);
+        console.log(usingSplit) // [ 'h', 'i', ' ', 't', 'h', 'e', 'r', 'e' ]
+
+
+        // convert object to array use Object.keys(),Object.values(), and Object.entries().
+
+        const person3 = {
+            firstName: 'John',
+            lastName: 'Doe'
+        };
+        console.log(Object.values(person3))
+        console.log(Object.keys(person3))
+        console.log(Object.entries(person3))
+
+        // convert array to object 2 methods
+        var arr4 = ['a', 'b', 'c'];
+        var obj = { ...arr4 }
+        console.log(obj);
+
+        let zx = Object.assign({}, arr4)
+        console.log(zx)
+        // write function return lenght of array  1st methods
+        function baby() {
+            return long.length
+        }
+        let long = ["e", "i", "u", "e", "o"]
+        console.log(baby())
+
+        //    2nd
+        function func(x) {
+            console.log(typeof x, arguments.length);
+        }
+        func("i", "e", "u", 'o', 'a');
+
+        // fibonacci take 1st number +2nd 
+
+        function fibonacci(limit) {
+            let result = [0, 1];
+
+            for (var i = 1; i < limit; i++) {
+                result[result.length] = result[result.length - 1] + result[result.length - 2];
+            }
+
+            return result;
+
+        }
+        // [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+        console.log(fibonacci(8));
 
 
 
+        function fiba(n) {
+            if (n <= 2) return 1;
+            return fiba(n - 1) + fiba(n - 2) + n.length;
+        }
+
+        console.log(Object.entries(fiba(8)))
+
+        // write function return reverse string 1st
+        function reverseString(str) {
+            return str.split(' ').reverse().join(' ')
+        }
+        console.log(reverseString("Dogs say wouf!"))
+        console.log(reverseString("Battery charges at 100%"))
+        console.log(reverseString("how can mirrors be real?"))
+
+        // 2nd
+
+        function reverseStrings(str) {
+            var newString = "";
+            for (var i = str.length - 1; i >= 0; i--) {
+                newString += str[i];
+            }
+            return newString;
+        }
+        console.log(reverseStrings("how can mirrors be real?"))
+        console.log(reverseStrings("Dogs say wouf!"))
+        console.log(reverseStrings("Battery charges at 100%"))
 
 
+        // convert each first letter of string to upper case  1st
 
+        function uppercase(str) {
+            var array1 = str.split(' ');
+            var newarray1 = [];
 
+            for (var x = 0; x < array1.length; x++) {
+                newarray1.push(array1[x].charAt(0).toUpperCase() + array1[x].slice(1));
+            }
+            return newarray1.join(' ');
+        }
+        console.log(uppercase("the quick brown fox"));  // The Quick Brown Fox
 
+        // 2nd
+
+        function lo(mo) {
+            return mo.split(" ").map(word => word[0].toUpperCase() + word.slice(1));
+        }
+        console.log(lo('learn to code for free with freeCodeCamp'))
+        // 3rd
+        let learnCoding = 'learn to code for free with freeCodeCamp';
+        let splitLearnCoding = learnCoding.split(" ");
+        let capSplitLearnCoding = splitLearnCoding.map(word => word[0].toUpperCase() + word.slice(1));
+
+        //  double each number of string
+
+        function double(so) {
+            return so.split('').map((v) => v + v).join('')
+        }
+        console.log(double('twoPlacedFloat'));
     </script>
 
 </body>
