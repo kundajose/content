@@ -687,6 +687,32 @@
             return so.split('').map((v) => v + v).join('')
         }
         console.log(double('twoPlacedFloat'));
+
+        // check if numbers of array is square(root) or not to square(root)
+        function squareOrSquareRoot(array) {
+            return array.map((roots) => {
+                const square = Math.sqrt(roots);
+                return square % 1 == 0 ? square : roots * roots;
+            });
+        }
+        console.log(squareOrSquareRoot([4, 3, 9, 7, 2, 1]))
+
+        // use padStart() method
+            var totn_string = "TechOnTheNet";
+
+            console.log(totn_string.padStart(20, "A"));
+            // use padStart() method
+            function maskify(cc) {
+                l = cc.length;
+                return cc.slice(-4).padStart(l, "#");
+            }
+            console.log(maskify("4556364607935616"));
+            console.log(maskify("64607935616"));
+            console.log(maskify("1"));
+            console.log(maskify(""));
+            console.log(maskify("Skippy"));
+            console.log(maskify("Nananananananananananananananana Batman!"));
+
     </script>
 
 </body>
